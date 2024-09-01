@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class HowManyNumsAreSmallerThanCurrentNumInArray {
 
@@ -11,7 +12,8 @@ public class HowManyNumsAreSmallerThanCurrentNumInArray {
     public static int[] smallerNumbersThanCurrent(int[] nums) {
         int[] copy = nums.clone();
         Arrays.sort(copy);
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer,Integer> map = new HashMap<>();
+       // IntStream.range(0, nums.length).forEach(i -> map.putIfAbsent(copy[i], i));
         for (int i = 0; i < copy.length; i++) {
             map.putIfAbsent(copy[i],i);
         }
