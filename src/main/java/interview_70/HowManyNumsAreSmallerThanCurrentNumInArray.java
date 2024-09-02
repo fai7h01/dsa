@@ -1,5 +1,6 @@
+package interview_70;
+
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class HowManyNumsAreSmallerThanCurrentNumInArray {
 
